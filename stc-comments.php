@@ -48,7 +48,9 @@ add_action('init','stc_comm_logout');
 function stc_comm_logout() {
 	if ($_GET['stc-logout']) { 
 		session_unset();
-		wp_redirect(stc_get_current_url());
+		$page = stc_get_current_url();
+		if (strpos($page, "?") !== false) $page = reset(explode("?", $page));
+		wp_redirect($page);
 		exit; 
 	}
 }

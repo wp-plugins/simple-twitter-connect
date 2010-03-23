@@ -54,7 +54,7 @@ function stc_publish_admin_init() {
 }
 
 function stc_publish_section_callback() {
-	echo "<p>Settings for the STC-Publish plugin. The manual Twitter Publishing buttons can be found on the Edit Post or Edit Page screen, after you publish a post. If you can't find them, try scrolling down or seeing if you have the box disabled in the Options dropdown.</p>";
+	echo "<p>Settings for the STC-Publish plugin.</p>";
 }
 
 function stc_publish_auto_callback() {

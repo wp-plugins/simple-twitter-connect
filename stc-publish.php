@@ -181,7 +181,7 @@ function stc_publish_automatic($id, $post) {
 	
 	$args = apply_filters('stc_publish_automatic', $args, $post);
 
-	$resp = stc_do_request('http://api.twitter.com/1/statuses/update',$args);
+	$resp = stc_do_request('http://api.twitter.com/1.1/statuses/update',$args);
 }
 
 function stc_get_default_tweet($id) {

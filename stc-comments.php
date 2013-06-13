@@ -169,7 +169,7 @@ function stc_comm_get_display() {
 	$tw = stc_get_credentials();
 	if ($tw) {
 		echo "<span id='tw-user'>".
-			 "<img src='http://api.twitter.com/1/users/profile_image/".$tw->screen_name."?size=bigger' width='96' height='96' />".
+			 "<!--<img src='http://api.twitter.com/1/users/profile_image/".$tw->screen_name."?size=bigger' width='96' height='96' />-->".
 			 "<span id='tw-msg'><strong>Hi ".$tw->name."!</strong><br />You are connected with your Twitter account. ".
 			 "<a href='?stc-logout=1'>Logout</a>".
 			 "</span></span>";
@@ -260,7 +260,7 @@ function comment_user_details_end() { echo '</div>'; }
 
 
 // generate avatar code for Twitter user comments
-add_filter('get_avatar','stc_comm_avatar', 10, 5);
+//add_filter('get_avatar','stc_comm_avatar', 10, 5);
 function stc_comm_avatar($avatar, $id_or_email, $size = '96', $default = '', $alt = false) {
 	// check to be sure this is for a comment
 	if ( !is_object($id_or_email) || !isset($id_or_email->comment_ID) || $id_or_email->user_id) 

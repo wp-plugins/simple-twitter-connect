@@ -95,7 +95,7 @@ function stc_followers_get($username) {
 	$args['screen_name']=$username;
 	$args['cursor']=-1;
 	
-	$resp = stc_do_request('http://api.twitter.com/1/followers/ids',$args, 'GET');
+	$resp = stc_do_request('http://api.twitter.com/1.1/followers/ids',$args, 'GET');
 	
 	if (!$resp) return array();
 	
@@ -113,7 +113,7 @@ function stc_followers_get($username) {
 	$args['acc_secret'] = $options['autotweet_secret'];
 	$args['user_id']=implode($fols,',');
 	
-	$resp = stc_do_request('http://api.twitter.com/1/users/lookup',$args, 'GET');
+	$resp = stc_do_request('http://api.twitter.com/1.1/users/lookup',$args, 'GET');
 	
 	// $resp should now be an array of up to 100 twitter user objects.
 	

@@ -218,7 +218,7 @@ function stc_comm_send_to_twitter() {
 		
 		$args['status'] = str_replace('%',$link, $options['comment_text']);
 		
-		$resp = stc_do_request('http://api.twitter.com/1/statuses/update',$args);
+		$resp = stc_do_request('http://api.twitter.com/1.1/statuses/update',$args);
 	}
 }
 
